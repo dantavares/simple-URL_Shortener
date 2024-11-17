@@ -11,3 +11,5 @@ Each link is stored in a database along with its previously calculated id, and s
 5. Edit the "db_config.json" file with your database data.
 
 Now just open the folder in your browser and start using it. If you have an IQ > 80 you won't need any further instructions.
+
+If you prefer English, fork your own repository and translate.
