@@ -1,0 +1,4 @@
+<files db_config.json>
+    order allow,deny
+    deny from all
+</files>
