@@ -14,7 +14,7 @@ var cpicon =  	'<svg width="15" height="15" viewBox="0 0 0.45 0.45">'+
 				' 0 1 .17.281V.093A.02.02 0 0 1 .188.075h.056v.056A.056.056 0 0'+
 				' 0 .3.188h.056Z"/></svg>';
 
-function pastetxt(txt, msg) {
+function pastetxt(txt) {
 	var textArea = document.createElement("textarea");
 	textArea.value = txt;
   	textArea.style.position = "fixed";
@@ -24,7 +24,6 @@ function pastetxt(txt, msg) {
 	textArea.setSelectionRange(0, 99999); // For mobile devices
 	document.execCommand('copy');
 	document.body.removeChild(textArea);
-	alertify.notify(msg , 'success', 3);
 }
 
 function btnclick(tp) {
@@ -74,7 +73,10 @@ function Resposta() {
 			if (resp.id == 0) {
 				if (Type == 1) { 
 					lblink.innerHTML = 'Link Curto: '+resp.tnylink+' '+cpicon;
-					lblink.onclick = function() { pastetxt(resp.tnylink, 'Link Curto copiado!'); };
+					lblink.onclick = function() { 
+						pastetxt(resp.tnylink);
+						lblink.innerHTML = 'Link Curto: '+resp.tnylink+' '+' <-- Copiado! '+cpicon;
+					};
 				}
 				else {
 					lblink.innerHTML = 'Link: '+resp.tnylink+' apagado.';

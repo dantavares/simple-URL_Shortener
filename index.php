@@ -29,8 +29,6 @@
 				'<meta name="viewport" content="width=device-width, initial-scale=1" />'.
 				'<head>'.
 				'<link rel="stylesheet" href="style.css" />'.
-				'<link rel="stylesheet" href="alertify.css" />'.
-				'<link rel="stylesheet" href="default.css" />'.
 				'<title>Encurtador de Link</title>'.
 				"<link rel='icon' href='$pgicon'/>".
 				'</head>'.
@@ -51,7 +49,6 @@
 				'<li><label id="lblink"></label></li>';
 				
 	$ht_foot =	'</ul></body>'.
-				'<script src="alertify.js"></script>'.
 				'<script src="script.js"></script></html>';
 	
 	function qrylnk($db, $qcrc){
