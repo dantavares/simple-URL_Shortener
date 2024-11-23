@@ -1,4 +1,3 @@
-//import alertify from "alertify.js";
 var Request;
 var Type;
 var txtlink = document.getElementById("txlink");
@@ -27,7 +26,9 @@ function pastetxt(txt) {
 }
 
 function btnclick(tp) {
-	var txlink = encodeURIComponent(txtlink.value);
+	
+	var tlink = encodeURIComponent(txtlink.value);
+	txlink = tlink.replace("+", "%20");
 				
 	if (window.XMLHttpRequest) {
 		Request = new XMLHttpRequest();

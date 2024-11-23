@@ -151,7 +151,7 @@
 				}			
 			}
 			else			
-				if (filter_var($link, FILTER_VALIDATE_URL)) {
+				if (preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i", $link)) {
 					$crc = computeCRC($link);
 					$glink = qrylnk($db, $crc);
 				
@@ -163,7 +163,7 @@
 					echo '{"id":"0", "erro":"Ok", "tnylink":"'."$link".'"}';
 				}
 				else
-					echo '{"id":"2", "erro":"Link inválido", "tnylink":"?"}';
+					echo '{"id":"2", "erro":"Link Inválido", "tnylink":"?"}';
 		}
 	}
 	mysqli_close($db);
